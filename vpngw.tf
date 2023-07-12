@@ -9,6 +9,7 @@
     }
   }
 
+# Create VNET
   resource "azurerm_virtual_network" "vpn_gw" {
     name                = "vnet-${var.resource_group_name_prefix}-${var.resource_group_location}"
     location            = azurerm_resource_group.rg.location
@@ -16,6 +17,7 @@
     address_space       = ["${var.vnet_address_space}"]
   }
   
+# Create VPN GW Subnet
   resource "azurerm_subnet" "vpn_gw" {
     name                 = "GatewaySubnet"
     resource_group_name  = azurerm_resource_group.rg.name
@@ -23,6 +25,7 @@
     address_prefixes     = ["${var.vpn_gw_GatewaySubnet_address}"]
   }
   
+# Create Public IP for VPN GW
   resource "azurerm_public_ip" "vpn_gw" {
     name                = "pip-vpn-gw-${azurerm_resource_group.rg.location}"
     location            = azurerm_resource_group.rg.location
@@ -30,6 +33,7 @@
     allocation_method = "Dynamic"
   }
   
+# Create VPN GW
   resource "azurerm_virtual_network_gateway" "vpn_gw" {
     name                = "vpn-gw-${var.resource_group_location}"
     location            = azurerm_resource_group.rg.location
@@ -49,6 +53,7 @@
       subnet_id                     = azurerm_subnet.vpn_gw.id
     }
   
+  # Define VPN Point-to-Site including address space and public cert key
     vpn_client_configuration {
       address_space = ["${var.vpn_gw_vpn_client_configuration_address_space}"]
   
@@ -87,6 +92,7 @@
     }
   }
 
+# Create and define Local Network Gateway for Site-to-Site connection with BGP to external IP address
 resource "azurerm_local_network_gateway" "remote_net" {
     name                = "local-network-gateway-remote-${azurerm_resource_group.rg.location}"
     location            = azurerm_resource_group.rg.location
@@ -100,6 +106,7 @@ resource "azurerm_local_network_gateway" "remote_net" {
       }
 }
 
+# Create IPSec connection to remote network
 resource "azurerm_virtual_network_gateway_connection" "remote_connection" {
     name                       = "vpn-connection-remote-net"
     location                   = azurerm_resource_group.rg.location
