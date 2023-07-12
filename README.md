@@ -46,9 +46,9 @@ Action Secrets:
 
 ## Note on deployment time: *Creating a virtual network gateway can take up to **30 minutes** to complete. *
 
-#Post VPN Gateway creation
+## Post VPN Gateway creation
 
-## Once the VPN gateway is successfully deployed, the remote IPSec router/firewall/gateway needs to be configured for the Site-to-Site termination. The major vendors (Cisco, Juuniper, Generic Samples, Sentrium, Ubiquiti, Allied Telesis, etc.) configurations can be dowloaded from the Resource Group/Connection then under the tab section use Download configuration. This should work to configure the remote network device.
+### Once the VPN gateway is successfully deployed, the remote IPSec router/firewall/gateway needs to be configured for the Site-to-Site termination. The major vendors (Cisco, Juuniper, Generic Samples, Sentrium, Ubiquiti, Allied Telesis, etc.) configurations can be dowloaded from the Resource Group/Connection then under the tab section use Download configuration. This should work to configure the remote network device.
 
 ## For Point-to-Site use, see ..
 
