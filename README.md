@@ -2,6 +2,12 @@
 
 This Azure Terraform template creates in Azure a VPN Gateway, the connectivity hub vnet and a local network gateway connection for Site-to-Site using BGP
 
+While this creates a single VNET, it can serve as a connectivity hub for the following:
+- Part of a hub and spoke model between vnets - yes the VPN GW can serve as an hub router if needed, but there are other choices as well
+- Connectivity to offsite via a VPN connection for Site-to-Site or Point-to-Site
+- To increase the security and make this a "Secure Hub" an Azure FW or third party NVA can be added
+- This is a simple example, refer to Azure's Enterprise Scale Landing Zone for a better enterprise scale implementation with recommended best practices aadditional features in a production environment
+
 It has the following variables defined in the file variables.rf
 - Resource Group Name
 - Resource Region Location
@@ -27,7 +33,6 @@ Action Secrets:
 
 ### Note: The Service Principal needs to have the RBAC rights over the subscription to 
 - Create a Resource Group
-- Create a VM
 - Create A Vnet and subnet
 - Create Public IP addresses (IPv4 and IPv6)
 - Create NSG
