@@ -51,4 +51,4 @@ Action Secrets:
 - [Terraform Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/point_to_site_vpn_gateway)
 - [Virtual network Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 - [Terraform AzureRM Provider Documentation](https://www.terraform.io/docs/providers/azurerm/index.html)
-- https://github.com/kumarvna/terraform-azurerm-vpn-gateway/blob/master/README.md
+- https://github.com/kumarvna/terraform-azurerm-vpn-gateway/
