@@ -6,7 +6,7 @@ While this creates a single VNET, it can serve as a connectivity hub for the fol
 - Part of a hub and spoke model between vnets - yes the VPN GW can serve as an hub router if needed, but there are other choices as well
 - Connectivity to offsite via a VPN connection for Site-to-Site or Point-to-Site
 - To increase the security and make this a "Secure Hub" an Azure FW or third party NVA can be added
-- This is a simple example, refer to Azure's Enterprise Scale Landing Zone for a better enterprise scale implementation with recommended best practices aadditional features in a production environment
+- This is a simple example, refer to Azure's Enterprise Scale Landing Zone Architecture for a better enterprise scale implementation with recommended best practices aadditional features in a production environment - see https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
 
 It has the following variables defined in the file variables.rf
 - Resource Group Name
@@ -45,4 +45,6 @@ Action Secrets:
 ## See     .github/workflows/terraform.yml file for Action execution
 
 # References:
+- Azure Cloud Adoption Framework - Enterprise Scale Landing Zone Architecture - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+
 
