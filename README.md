@@ -44,7 +44,12 @@ Action Secrets:
 
 ## See     .github/workflows/terraform.yml file for Action execution
 
+## Note: *Creating a virtual network gateway can take up to **30 minutes** to complete. *
+
 # References:
 - Azure Cloud Adoption Framework - Enterprise Scale Landing Zone Architecture - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+- https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/point_to_site_vpn_gateway
+- [Virtual network Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+-  [Terraform AzureRM Provider Documentation](https://www.terraform.io/docs/providers/azurerm/index.html)
 
 
