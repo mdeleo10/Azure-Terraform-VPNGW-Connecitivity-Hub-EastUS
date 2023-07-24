@@ -7,6 +7,7 @@ While this creates a single VNET, it can serve as a connectivity hub for the fol
 - Connectivity to offsite via a VPN connection for Site-to-Site or Point-to-Site
 - To increase the security and make this a "Secure Hub" an Azure FW or third party NVA can be added
 - This is a simple example, refer to Azure's Enterprise Scale Landing Zone Architecture for a better enterprise scale implementation with recommended best practices aadditional features in a production environment - see https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+- Since connectivity hubs are typically region based for high availability purposes and cost management. A similar deployment might be used for another region
 
 It has the following variables defined in the file variables.rf
 - Resource Group Name
@@ -58,3 +59,4 @@ Action Secrets:
 - [Virtual network Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 - [Terraform AzureRM Provider Documentation](https://www.terraform.io/docs/providers/azurerm/index.html)
 - https://github.com/kumarvna/terraform-azurerm-vpn-gateway/
+

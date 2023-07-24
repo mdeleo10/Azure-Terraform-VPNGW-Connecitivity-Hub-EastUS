@@ -1,4 +1,4 @@
-# Define Resource Group Name
+# Define Resource Group Name, including the Azure Region
   resource "azurerm_resource_group" "rg" {
     name      = "rg-${var.resource_group_name_prefix}-${var.resource_group_location}"
     location  = var.resource_group_location
@@ -9,7 +9,7 @@
     }
   }
 
-# Create VNET
+# Create VNET for the Azure Region
   resource "azurerm_virtual_network" "vpn_gw" {
     name                = "vnet-${var.resource_group_name_prefix}-${var.resource_group_location}"
     location            = azurerm_resource_group.rg.location
