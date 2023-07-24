@@ -1,3 +1,22 @@
+# Terraform GitHub storage account for state output
+#
+#
+# Create Storage Account Container
+# Suggestion: create tfstate-repo-name, needs to be lower case only
+#
+# az storage container create -n tftstate-azure-terraform-vpngw-connecitivity-hub-eastus --account-name  cloudmdterraformstate
+#
+terraform {
+  backend "azurerm" {
+    resource_group_name     = "rg-terraform-state-001"
+    storage_account_name    = "cloudmdterraformstate"
+    container_name          = "tftstate-azure-terraform-vpngw-connecitivity-hub-eastus"
+    key                     = "tfstate"
+  }
+}
+
+
+
 # Define Resource Group Name, including the Azure Region
   resource "azurerm_resource_group" "rg" {
     name      = "rg-${var.resource_group_name_prefix}-${var.resource_group_location}"
