@@ -15,8 +15,6 @@ terraform {
   }
 }
 
-
-
 # Define Resource Group Name, including the Azure Region
   resource "azurerm_resource_group" "rg" {
     name      = "rg-${var.resource_group_name_prefix}-${var.resource_group_location}"
@@ -64,6 +62,7 @@ terraform {
     active_active = false
     enable_bgp    = true
     sku           = "Standard"
+    private_ip_address_enabled    = true
   
     ip_configuration {
       name                          = "vnetGatewayConfig"

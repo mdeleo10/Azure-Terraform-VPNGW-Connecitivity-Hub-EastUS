@@ -35,7 +35,7 @@ Action Secrets:
 ### Note: The Service Principal needs to have the RBAC rights over the subscription to 
 - Create a Resource Group
 - Create A Vnet and subnet
-- Create Public IP addresses (IPv4 and IPv6)
+- Create Public IP address
 - Create NSG
 - Create a VPNGW and Local Network Gateway
 
@@ -59,5 +59,3 @@ Action Secrets:
 - [Virtual network Gateway](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 - [Terraform AzureRM Provider Documentation](https://www.terraform.io/docs/providers/azurerm/index.html)
 - https://github.com/kumarvna/terraform-azurerm-vpn-gateway/
-
-
