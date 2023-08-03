@@ -62,11 +62,13 @@ terraform {
     active_active = false
     enable_bgp    = true
     sku           = "Standard"
-    private_ip_address_enabled    = true
+
   
     ip_configuration {
       name                          = "vnetGatewayConfig"
       public_ip_address_id          = azurerm_public_ip.vpn_gw.id
+    # Adding support for Internal VPN - for example IPSec tunnel over Express Route
+    private_ip_address_enabled    = true
       private_ip_address_allocation = "Dynamic"
       subnet_id                     = azurerm_subnet.vpn_gw.id
     }
