@@ -62,7 +62,7 @@ terraform {
     active_active = false
     enable_bgp    = true
   # sku = "standart" for non-internal BGP
-    sku           = "VpnGw2"
+    sku           = "VpnGw1az"
   
     ip_configuration {
       name                          = "vnetGatewayConfig"
