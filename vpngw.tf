@@ -65,7 +65,7 @@ terraform {
     enable_bgp    = true
   # sku = "standard" for non-internal IPSec tunnel
     sku           = "VpnGw2AZ"
-  
+
     ip_configuration {
       name                          = "vnetGatewayConfig"
       public_ip_address_id          = azurerm_public_ip.vpn_gw.id
