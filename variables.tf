@@ -1,6 +1,6 @@
 
 variable "resource_group_name_prefix" {
-  default       = "Connectivity-Hub"
+  default       = "Connectivity-Hub-test"
   description   = "Prefix of the resource group name that's combined with a region"
 }
 
