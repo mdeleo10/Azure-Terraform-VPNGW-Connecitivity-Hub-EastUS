@@ -49,7 +49,7 @@ terraform {
     resource_group_name = azurerm_resource_group.rg.name
     allocation_method = "Dynamic"
     # Standard SKU for Internal IPSec tunnel
-    sku               = "Standard"
+#    sku               = "Standard"
   }
   
 # Create VPN GW
@@ -64,8 +64,10 @@ terraform {
     active_active = false
     enable_bgp    = true
   # sku = "standard" for non-internal IPSec tunnel
-    sku           = "VpnGw2AZ"
+ #   sku           = "VpnGw2AZ"
+    sku            = "Standard"
 
+    
     ip_configuration {
       name                          = "vnetGatewayConfig"
       public_ip_address_id          = azurerm_public_ip.vpn_gw.id
@@ -74,7 +76,7 @@ terraform {
     }
 
   # Adding support for Internal VPN - for example IPSec tunnel over Express Route
-    private_ip_address_enabled    = true
+#    private_ip_address_enabled    = true
   
   # Define VPN Point-to-Site including address space and public cert key
     vpn_client_configuration {
