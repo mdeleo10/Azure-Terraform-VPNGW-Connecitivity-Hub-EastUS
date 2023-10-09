@@ -5,22 +5,22 @@ variable "resource_group_name_prefix" {
 }
 
 variable "resource_group_location" {
-  default       = "eastus"
+  default       = "westus3"
   description   = "Location of the resource group."
 }
 
 variable "vnet_address_space" {
-  default       = "10.111.0.0/16"
+  default       = "10.113.0.0/16"
   description   = "Vnet Address Space"
 }
 
 variable "vpn_gw_GatewaySubnet_address"  {
-  default       = "10.111.3.0/24"
+  default       = "10.113.3.0/24"
   description   = "VPN GW Subnet Address Space"
 }
 
 variable "vpn_gw_vpn_client_configuration_address_space"  {
-  default       = "10.112.2.0/24"
+  default       = "10.114.2.0/24"
   description   = "VPN GW Client P2S Subnet Address Space"
 }
 
