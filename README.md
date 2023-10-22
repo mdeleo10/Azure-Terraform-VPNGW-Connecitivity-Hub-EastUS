@@ -53,6 +53,9 @@ Action Secrets:
 
 ## For Point-to-Site use, see ..
 
+## The Site to Site configuration can work with a DMZ
+Ideally the local router should have a Public IP address, but on ocassions it is behind a NAT. See the Cisco_IOS_15.2_DMZ_config.txt example for a local router behind a NAT device. If a DMZ device can be configured to point to the router, it will work. The configuration change needs to update local external IP of the router's outside IP (inside the NAT network) and not the Public IP of the NAT device. It has been tested on a Cisco router with Xfinity cable modem performing NAT.
+
 # References:
 - [Azure Cloud Adoption Framework - Enterprise Scale Landing Zone Architecture](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone)
 - [Terraform Registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/point_to_site_vpn_gateway)
